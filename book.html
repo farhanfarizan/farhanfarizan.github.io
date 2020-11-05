@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Vacation - Free Bootstrap 4 Template by Colorlib</title>
+    <title>Hiltons Hotel</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -29,7 +29,7 @@
   <body>
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Vacation<span>Travel Agency</span></a>
+	      <a class="navbar-brand" href="index.html">Hiltons Hotel<span>Travel Agency</span></a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -37,10 +37,10 @@
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+	          <!-- <li class="nav-item"><a href="about.html" class="nav-link">About</a></li> -->
 	          <li class="nav-item"><a href="destination.html" class="nav-link">Destination</a></li>
-	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li>
+	          <!-- <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li> -->
+	          <!-- <li class="nav-item active"><a href="contact.html" class="nav-link">Contact</a></li> -->
 	          <li class="nav-item cta"><a href="book.html" class="nav-link">Book Now</a></li>
 
 	        </ul>
@@ -54,156 +54,83 @@
       <div class="container">
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
           <div class="col-md-9 ftco-animate pb-5 text-center">
-            <h1 class="mb-3 bread">Contact Us</h1>
+            <h1 class="mb-3 bread">Book Now</h1>
             <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Contact us <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
     </section>
-
-    <section class="ftco-section ftco-no-pb contact-section">
+			
+		<section class="ftco-section contact-section">
       <div class="container">
-        <div class="row d-flex contact-info">
-          <div class="col-md-3 d-flex">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-map-signs"></span>
-          		</div>
-          		<h3 class="mb-2">Address</h3>
-	            <p>198 West 21th Street, Suite 721 New York NY 10016</p>
-	          </div>
-          </div>
-          <div class="col-md-3 d-flex">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-phone2"></span>
-          		</div>
-          		<h3 class="mb-2">Contact Number</h3>
-	            <p><a href="tel://1234567920">+ 1235 2355 98</a></p>
-	          </div>
-          </div>
-          <div class="col-md-3 d-flex">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-paper-plane"></span>
-          		</div>
-          		<h3 class="mb-2">Email Address</h3>
-	            <p><a href="mailto:info@yoursite.com">info@yoursite.com</a></p>
-	          </div>
-          </div>
-          <div class="col-md-3 d-flex">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-globe"></span>
-          		</div>
-          		<h3 class="mb-2">Website</h3>
-	            <p><a href="#">yoursite.com</a></p>
-	          </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="ftco-section ftco-no-pt">
-    	<div class="container">
-    		<div class="row justify-content-center pb-4">
+        <div class="row block-9">
           <div class="col-md-12 heading-section text-center ftco-animate">
             <h2 class="mb-4">Tour Destination</h2>
           </div>
-        </div>
-        <div class="row" id="bookings">
-        </div>
-    	</div>
-    </section>
-			
-		<!-- <section class="ftco-section contact-section">
-      <div class="container">
-        <div class="row block-9">
           <div class="col-md-12 order-md-last d-flex">
             <form action="#" class="bg-light p-5 contact-form">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name">
+                <input type="text" class="form-control" placeholder="Your Name" id="name">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email">
+                <input type="text" class="form-control" placeholder="Your Email" id="email">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject">
+                <select class="form-control" id="place">
+
+                </select>
               </div>
               <div class="form-group">
-                <textarea name="" id="" cols="30" rows="7" class="form-control" placeholder="Message"></textarea>
+                <textarea name="remarks" id="remarks" cols="30" rows="7" class="form-control" placeholder="Remarks"></textarea>
               </div>
               <div class="form-group">
-                <input type="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+                
+                <input id="bookNow" value="Book Now" class="btn btn-primary py-3 px-5">
               </div>
             </form>
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
     <footer class="ftco-footer bg-bottom" style="background-image: url(images/footer-bg.jpg);">
       <div class="container">
         <div class="row mb-5">
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Vacation</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
-              </ul>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+          <h2 class="ftco-heading-2">Vacation</h2>
+          <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+          <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+            <li class="ftco-animate"><a href="https://twitter.com/hiltonhotels?lang=en" target="_blank"><span class="icon-twitter"></span></a></li>
+            <li class="ftco-animate"><a href="https://www.facebook.com/Hilton/" target="_blank"><span class="icon-facebook"></span></a></li>
+            <li class="ftco-animate"><a href="https://www.instagram.com/hiltonhotels/?hl=en" target="_blank"><span class="icon-instagram"></span></a></li>
+          </ul>
+          </div>
+        </div>
+        <div class="col-md">
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Have a Questions?</h2>
+            <div class="block-23 mb-3">
+            <ul>
+              <li><span class="icon icon-map-marker"></span><span class="text">3, Jalan Stesen Sentral, Kuala Lumpur Sentral, 50470 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur</span></li>
+              <li><a href="#"><span class="icon icon-phone"></span><span class="text">03 2264 2264</span></a></li>
+              <li><a href="#"><span class="icon icon-envelope"></span><span class="text">kualalumpur@hilton.com</span></a></li>
+            </ul>
             </div>
           </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4 ml-md-5">
-              <h2 class="ftco-heading-2">Information</h2>
-              <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Online Enquiry</a></li>
-                <li><a href="#" class="py-2 d-block">General Enquiries</a></li>
-                <li><a href="#" class="py-2 d-block">Booking Conditions</a></li>
-                <li><a href="#" class="py-2 d-block">Privacy and Policy</a></li>
-                <li><a href="#" class="py-2 d-block">Refund Policy</a></li>
-                <li><a href="#" class="py-2 d-block">Call Us</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Experience</h2>
-              <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Adventure</a></li>
-                <li><a href="#" class="py-2 d-block">Hotel and Restaurant</a></li>
-                <li><a href="#" class="py-2 d-block">Beach</a></li>
-                <li><a href="#" class="py-2 d-block">Nature</a></li>
-                <li><a href="#" class="py-2 d-block">Camping</a></li>
-                <li><a href="#" class="py-2 d-block">Party</a></li>
-              </ul>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
-            	<div class="block-23 mb-3">
-	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
-	              </ul>
-	            </div>
-            </div>
-          </div>
+        </div>
         </div>
         <div class="row">
-          <div class="col-md-12 text-center">
-            <p>
-              <!-- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
-            </p>
-          </div>
+        <div class="col-md-12 text-center">
+          <p>
+          <!-- Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> -->
+          </p>
+        </div>
         </div>
       </div>
-    </footer>
+      </footer>
     
   
 
@@ -228,46 +155,62 @@
     
   </body>
 </html>
-<script>
+<script>  
+  
   $(document).ready(function(){
-    getBookings();
-  });
-  function getBookings() {
-    let url = 'https://api.sheety.co/78811ed4db56f6b7568f2907acc1db02/bacHotel/bookings';
-    fetch(url)
-    .then((response) => response.json())
-      .then(json => {
-        // Do something with the data
-        console.log(json.bookings);
-        var bookings = document.getElementById("bookings");
-        // var bookingIds = [];
-        for(var i =0; i < json.bookings.length; i++) {
-          var day = json.bookings[i].day;
-          var city = json.bookings[i].city;
-          var bathroom = json.bookings[i].bathroom;
-          var room = json.bookings[i].room;
-          var place = json.bookings[i].place;
-          var price = json.bookings[i].price;
-          var img = json.bookings[i].image;
+    console.log("Ready");
+    getPlaces();
+    booking();
 
-          bookings.innerHTML +=
-            `<div class="col-md-4">
-              <div class="project-wrap">
-                <a href="#" class="img" style="background-image: url(${img});"></a>
-                <div class="text p-4">
-                  <span class="price">RM${price} / person</span>
-                  <span class="days">${day} Days Tour</span>
-                  <h3><a href="#">${city}</a></h3>
-                  <p class="location"><span class="ion-ios-map"></span> ${city}</p>
-                  <ul>
-                    <li><span class="flaticon-shower"></span>${bathroom}</li>
-                    <li><span class="flaticon-king-size"></span>${room}</li>
-                    <li><span class="flaticon-mountains"></span>${place}</li>
-                  </ul>
-                </div>
-              </div>
-            </div>`
-        }        
-      });
+  });
+
+  document.getElementById("bookNow").addEventListener("click",function(){
+    console.log("book button click");
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let place = document.getElementById("place").value;
+    let remarks = document.getElementById("remarks").value;
+    booking(name,email,place,remarks);
+  });
+
+  function getPlaces() {
+	  // let url = 'https://api.sheety.co/3a654da549e490e20e51c232474f11d1/bacHotel/bookings';
+	  fetch(url)
+	  .then((response) => response.json())
+		.then(json => {
+		  // Do something with the data
+		  console.log(json.bookings);
+		  var bookings = document.getElementById("place");
+		  for(var i =0; i < json.bookings.length; i++) {
+			  var places = json.bookings[i].city;
+
+        bookings.innerHTML +=
+        `<option value="${places}" id="place">${places}</option>`
+      }
+		});
+	}
+
+  function booking(name,email,place,remarks) {
+    // let url = 'https://api.sheety.co/3a654da549e490e20e51c232474f11d1/bacHotel/users';
+    let body = {
+      user: {
+        name:name,
+        email:email,
+        place:place,
+        remarks:remarks
+      }
+    }
+    fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(body),
+      headers:{
+        "Content-Type":"application/json"
+      }
+    })
+    .then((response) => response.json())
+    .then(json => {
+      // Do something with object
+      console.log(json.user);
+    });
   }
 </script>

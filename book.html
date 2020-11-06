@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Hiltons Hotel</title>
+    <title>JJI - Jalan Jalan Indonesia</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -25,11 +25,12 @@
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="css/style.css">
+    
   </head>
   <body>
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Hiltons Hotel<span>Travel Agency</span></a>
+	      <a class="navbar-brand" href="index.html">J J I<span>Booking Platform</span></a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -55,7 +56,7 @@
         <div class="row no-gutters slider-text js-fullheight align-items-end justify-content-center">
           <div class="col-md-9 ftco-animate pb-5 text-center">
             <h1 class="mb-3 bread">Book Now</h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Contact us <i class="ion-ios-arrow-forward"></i></span></p>
+            <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Book Now <i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
@@ -63,28 +64,65 @@
 			
 		<section class="ftco-section contact-section">
       <div class="container">
-        <div class="row block-9">
+        <div class="row block-9 justify-content-center">
           <div class="col-md-12 heading-section text-center ftco-animate">
-            <h2 class="mb-4">Tour Destination</h2>
+            <h2 class="mb-4">Book With Us</h2>
           </div>
-          <div class="col-md-12 order-md-last d-flex">
+          <div class="col-md-9 order-md-last d-flex">
             <form action="#" class="bg-light p-5 contact-form">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Name" id="name">
+              <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Your Name" id="name">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Your Email" id="email">
+                </div>
+              </div><br>              
+              <div>
+                Destination
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email" id="email">
-              </div>
-              <div class="form-group">
-                <select class="form-control" id="place">
-
+                <select class="form-control" id="destination">
+                  <option value="Dieng Plateau">Dieng Plateau</option>
+                  <option value="Borobudur Temple">Borobudur Temple</option>
+                  <option value="Komodo National Park">Komodo National Park</option>
+                  <option value="Raja Ampat">Raja Ampat</option>
+                  <option value="Mount Bromo">Mount Bromo</option>
+                  <option value="Ubud">Ubud</option>
                 </select>
               </div>
+              <div class="row">
+                <div class="col">                  
+                  Check In
+                </div>
+                <div class="col">                  
+                  Check Out
+                </div>
+                <div class="col">                  
+                  Pax
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">                  
+                  <input type="date" id="checkin" class="form-control datepicker">
+                </div>
+                <div class="col">                  
+                  <input type="date" id="checkout" class="form-control datepicker">
+                </div>
+                <div class="col">                  
+                  <select class="form-control" name="pax" id="pax">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                </div>
+              </div><br>
               <div class="form-group">
                 <textarea name="remarks" id="remarks" cols="30" rows="7" class="form-control" placeholder="Remarks"></textarea>
               </div>
-              <div class="form-group">
-                
+              <div class="form-group">                
                 <input id="bookNow" value="Book Now" class="btn btn-primary py-3 px-5">
               </div>
             </form>
@@ -155,48 +193,29 @@
     
   </body>
 </html>
-<script>  
-  
-  $(document).ready(function(){
-    console.log("Ready");
-    getPlaces();
-    booking();
-
-  });
-
+<script>
   document.getElementById("bookNow").addEventListener("click",function(){
     console.log("book button click");
     let name = document.getElementById("name").value;
     let email = document.getElementById("email").value;
-    let place = document.getElementById("place").value;
+    let destination = document.getElementById("destination").value;
+    let checkin = document.getElementById("checkin").value;
+    let checkout = document.getElementById("checkout").value;
+    let pax = document.getElementById("pax").value;
     let remarks = document.getElementById("remarks").value;
-    booking(name,email,place,remarks);
+    booking(name,email,destination,checkin,checkout,pax,remarks);
   });
 
-  function getPlaces() {
-	  // let url = 'https://api.sheety.co/3a654da549e490e20e51c232474f11d1/bacHotel/bookings';
-	  fetch(url)
-	  .then((response) => response.json())
-		.then(json => {
-		  // Do something with the data
-		  console.log(json.bookings);
-		  var bookings = document.getElementById("place");
-		  for(var i =0; i < json.bookings.length; i++) {
-			  var places = json.bookings[i].city;
-
-        bookings.innerHTML +=
-        `<option value="${places}" id="place">${places}</option>`
-      }
-		});
-	}
-
-  function booking(name,email,place,remarks) {
-    // let url = 'https://api.sheety.co/3a654da549e490e20e51c232474f11d1/bacHotel/users';
+  function booking(name,email,destination,checkin,checkout,pax,remarks) {
+    let url = 'https://api.sheety.co/3a654da549e490e20e51c232474f11d1/bacHotel/bookings';
     let body = {
-      user: {
+      booking: {
         name:name,
         email:email,
-        place:place,
+        destination:destination,
+        checkin:checkin,
+        checkout:checkout,
+        pax:pax,
         remarks:remarks
       }
     }
@@ -210,7 +229,9 @@
     .then((response) => response.json())
     .then(json => {
       // Do something with object
-      console.log(json.user);
+      console.log(json.booking);
+      alert("Booking successful! Do not forget to leave your feedback.");
+      window.location.replace("feedback.html");
     });
   }
 </script>
